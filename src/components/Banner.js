@@ -4,6 +4,7 @@ import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import ParticleSphere from './ParticleSphere';
 
 export const Banner = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -24,6 +25,7 @@ export const Banner = () => {
 
   return (
     <section className="banner" id="home">
+      <ParticleSphere />
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
