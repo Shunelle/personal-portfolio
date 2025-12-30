@@ -315,50 +315,67 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Skills Css ************/
-.skill {
-  padding: 0 0 50px 0;
-  position: relative;
-}
-.skill-bx {
-  background: #151515;
-  border-radius: 64px;
+.skill-bx-grid {
+  background: rgba(18, 18, 18, 0.4);
+  border-radius: 60px;
+  padding: 60px 30px;
   text-align: center;
-  padding: 60px 50px;
-  margin-top: -60px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: -20px;
 }
-.skill h2 {
-	font-size: 45px;
-	font-weight: 700;
+
+.skill-grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 140px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.skill p {
-    color: #B8B8B8;
-    font-size: 18px;
-    letter-spacing: 0.8px;
-    line-height: 1.5em;
-    margin: 14px 0 75px 0;
+
+.skill-grid-item:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
 }
-.skill-slider {
-  width: 80%;
-  margin: 0 auto;
+
+.icon-placeholder {
+  width: 70px;
+  height: 70px;
+  background: rgba(0, 255, 170, 0.03);
+  border: 1px solid rgba(0, 255, 170, 0.2);
+  border-radius: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
-.skill-slider .item img {
-  width: 50%;
-  margin: 0 auto 15px auto;
+
+/* 營造奇幻感的發光球體 */
+.glow-orb {
+  width: 10px;
+  height: 10px;
+  background: #00ffaa;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #00ffaa, 0 0 30px rgba(0, 255, 170, 0.5);
 }
-.background-image-left {
-  top: 28%;
-  position: absolute;
-  bottom: 0;
-  width: 40%;
-  z-index: -4;
+
+.skill-grid-item h5 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #efefef;
+  margin: 0;
+  letter-spacing: 0.5px;
 }
 
 /************ Projects Css ************/
 .project {
   padding: 80px 0;
   position: relative;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.488);
 }
 .project h2 {
 	font-size: 45px;
@@ -480,9 +497,151 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   right: 0;
   z-index: -4;
 }
+.background-image-left {
+  top: 10%; /* 根據你的需求調整高低 */
+  position: absolute;
+  left: 0;
+  width: 35%; /* 限制寬度，避免它過大 */
+  z-index: -1; /* 確保它在文字內容下方 */
+  opacity: 0.6; /* 增加森林的朦朧感 */
+  pointer-events: none; /* 確保不會擋到點擊事件 */
+}
 
-/************ Projects Css ************/
-.contact {
+/************ Archives Css ************/
+.archive {
+  /* 增加上方的留白 */
+  padding: 60px 0 100px 0; 
+  background-color: #0A1F1F;
+  position: relative;
+}
+
+/* 如果你希望留白處有一些淡淡的裝飾感，可以加上這個 */
+.archive::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 80px; /* 一條細細的垂直線引導視覺往下 */
+  background: linear-gradient(to bottom, transparent, rgba(0, 255, 170, 0.3));
+}
+/* 容器樣式 */
+.archive-list-enhanced {
+  max-width: 1150px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.archive-item-wrap {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease;
+}
+
+.archive-row-trigger {
+  padding: 35px 20px; /* 增加上下間距讓畫面更開闊 */
+  cursor: pointer;
+}
+
+/* 長方形圖片設定 */
+.archive-img-container.rect-mode {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* 設定為 16:9 長方形，也可改為 4:3 */
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.archive-rect-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 確保圖片填滿長方形區域且不變形 */
+  transition: transform 0.5s ease;
+}
+
+.archive-item-wrap:hover .archive-rect-img {
+  transform: scale(1.08);
+}
+
+/* 文字層次優化 */
+.archive-info {
+  padding-left: 30px; /* 增加與大圖的間距 */
+}
+
+.archive-main-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.archive-subtitle {
+  font-size: 17px;
+  color: #00ffaa;
+  font-weight: 500;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tag-pill {
+  background: rgba(0, 255, 170, 0.05);
+  color: #a0a0a0;
+  font-size: 12px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-right: 10px;
+  border: 1px solid rgba(0, 255, 170, 0.2);
+}
+
+/* 展開詳細內容排版 */
+.archive-details-expand {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.archive-item-wrap.active .archive-details-expand {
+  max-height: 500px;
+}
+
+.details-inner-content {
+  /* 縮排計算：Col md=4 的寬度約為 33.3%，加上 30px padding */
+  padding: 10px 60px 40px calc(33.3% + 30px); 
+}
+
+.content-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #00ffaa, transparent);
+  margin-bottom: 25px;
+}
+
+.details-text {
+  font-size: 16px;
+  color: #d1d1d1;
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* 行動端適應 */
+@media (max-width: 768px) {
+  .archive-info {
+    padding-left: 15px;
+    margin-top: 20px;
+  }
+  .details-inner-content {
+    padding: 20px;
+  }
+  .archive-main-title {
+    font-size: 24px;
+  }
+}
+
+/************ contact Css ************/
+. {
   background: linear-gradient(90.21deg, #E67E22 -5.91%, #2D8B8B 111.58%);
   padding: 60px 0 200px 0;
 }

@@ -1,64 +1,49 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
-import colorSharp2 from "../assets/img/color-sharp2.png"
+import { Container, Row, Col } from "react-bootstrap";
+import colorSharp2 from "../assets/img/color-sharp2.png";
+import 'animate.css';
 
 export const Skills = () => {
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-  };
+  // 從你的履歷分類並扁平化這些技能 
+
+  const skills = [
+    // --- 你原本列出的 ---
+    { name: "Python" }, { name: "Unity (C#)" }, 
+    { name: "TouchDesigner" },    // 多媒體設計工具 [cite: 92]
+    { name: "3D Printing" },      // Real-Cam 專案製作 [cite: 24, 92]
+    { name: "Blender" }, 
+    { name: "Arduino" }, 
+    { name: "Raspberry Pi" },     
+    { name: "C/C++/C#" }, { name: "AWS" },  { name: "Figma" },
+    { name: "React" }, 
+    // { name: "FPGA (Vivado)" },       
+    { name: "ROS2" },                      
+  ];
 
   return (
     <section className="skill" id="skills">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
-                        <h2>Skills</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>Brand Identity</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>Logo Design</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
-                        </Carousel>
+      <Container>
+        <Row className="justify-content-center">
+          <Col md={12}>
+            <div className="skill-bx-grid animate__animated animate__fadeIn">
+              <h2>Planting Skillset</h2>
+              <Row className="justify-content-center g-4">
+                {skills.map((skill, index) => (
+                  <Col xs={6} md={4} lg={2} key={index} className="d-flex justify-content-center">
+                    <div className="skill-grid-item">
+                      <div className="icon-placeholder">
+                        {/* 未來放圖片的地方 */}
+                        <div className="glow-orb"></div>
+                      </div>
+                      <h5>{skill.name}</h5>
                     </div>
-                </div>
+                  </Col>
+                ))}
+              </Row>
             </div>
-        </div>
-        <img className="background-image-right" src={colorSharp2}></img>
+          </Col>
+        </Row>
+      </Container>
+      <img className="background-image-right" src={colorSharp2} alt="bg" />
     </section>
-  )
-}
+  );
+};

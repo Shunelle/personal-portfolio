@@ -12,19 +12,19 @@ export const Projects = () => {
   const projects = [
     {
       title: "Tingle-Tennis",
-      description: "Design & Development",
+      description: "VR Interaction / Game Design",
       imgUrl: projImg1,
     },
     {
       title: "Aidoll",
-      description: "Design & Development",
+      description: "AI Integration / HCI Product Dev",
       imgUrl: projImg2,
     },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
+    // {
+    //   title: "Business Startup",
+    //   description: "Design & Development",
+    //   imgUrl: projImg3,
+    // },
   ];
 
   return (
@@ -35,10 +35,13 @@ export const Projects = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Projects</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <h2>The Core Grove</h2>
+                <p className="max-w-2xl mx-auto text-lg leading-relaxed italic text-gray-300 opacity-90 transition-all hover:opacity-100">
+                  Deep within the digital wilderness, I have nurtured this <span className="text-emerald-400 font-semibold shadow-emerald-500/50">"Core Grove"</span>—a sanctuary for my most defining works of the past year. 
+                  Here, interactive experiences are brought to life through logic, and immersion is ignited by 3D environments.
+                </p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                  {/* <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
                       <Nav.Link eventKey="first">Tab 1</Nav.Link>
                     </Nav.Item>
@@ -48,7 +51,7 @@ export const Projects = () => {
                     <Nav.Item>
                       <Nav.Link eventKey="third">Tab 3</Nav.Link>
                     </Nav.Item>
-                  </Nav>
+                  </Nav> */}
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
                       <Row>

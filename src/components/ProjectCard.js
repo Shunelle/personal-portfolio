@@ -15,7 +15,8 @@ export const ProjectCard = ({ title, description, imgUrl }) => {
   );
 
   return (
-    <Col md={4}>
+    // 將 md={4} 改為 md={6}，這樣兩個專案就會各佔 50% 寬度
+    <Col sm={6} md={6}>
       {isTingleTennis ? (
         <a href="/tingle-tennis.html">
           {cardContent}

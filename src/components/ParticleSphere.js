@@ -7,7 +7,6 @@ function Particles({ count = 300 }) {
   const mesh = useRef();
   const mousePos = useRef([0, 0]);
 
-  // 1. 全域滑鼠監聽：確保粒子在底層也能接收座標
   useEffect(() => {
     const handleMouseMove = (e) => {
       mousePos.current = [
@@ -33,8 +32,8 @@ function Particles({ count = 300 }) {
   const { positions, colors } = useMemo(() => {
     const positions = new Float32Array(count * 3);
     const colors = new Float32Array(count * 3);
-    const colorTeal = new THREE.Color("#008080");
-    const colorOrange = new THREE.Color("#FF8C00");
+    const colorTeal = new THREE.Color("#00e0e0ff");
+    const colorOrange = new THREE.Color("#ffb357ff");
     for (let i = 0; i < count; i++) {
       positions[i * 3] = (Math.random() - 0.5) * 10;
       positions[i * 3 + 1] = (Math.random() - 0.5) * 10;
@@ -77,7 +76,7 @@ function Particles({ count = 300 }) {
         size={0.15} 
         vertexColors 
         transparent 
-        opacity={0.6} 
+        // opacity={0.8} 
         map={circleTexture} 
         alphaTest={0.5} 
         sizeAttenuation 
