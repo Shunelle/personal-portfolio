@@ -7,6 +7,7 @@ import './TingleTennis.css';
 // 圖片路徑
 import tingleHeroFull from "../assets/img/court.png";
 import flowChartImg from "../assets/img/flow-chart.png";
+import factorMap from "../assets/img/factor-map.png";
 import roomImg from "../assets/img/room.png"; 
 import floatingPersonImg from "../assets/img/wu.png"; 
 import hardware1 from "../assets/img/hardware1.png"; 
@@ -264,11 +265,18 @@ export const TingleTennis = () => {
 
                     {/* 這裡可以放你實際的 Flow Chart 圖片 */}
                     <Row className="mt-5 justify-content-center">
-                        <Col lg={10}>
+                        <Col lg={6} md={12}>
                             <div className="main-flow-image-container">
                                 <div className="flow-overlay">SYSTEM ARCHITECTURE FLOW</div>
                                 {/* 請替換成你的 flow 圖路徑 */}
                                 <img src={flowChartImg} alt="Game Flow Chart" className="img-fluid flow-img" />
+                            </div>
+                        </Col>
+                        <Col lg={6} md={12}>
+                            <div className="main-flow-image-container">
+                                <div className="flow-overlay">FACTOR MAP</div>
+                                {/* 請替換成你的 flow 圖路徑 */}
+                                <img src={factorMap} alt="Game Flow Chart" className="img-fluid flow-img" />
                             </div>
                         </Col>
                     </Row>
