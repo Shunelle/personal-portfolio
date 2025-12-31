@@ -1,0 +1,345 @@
+import React, { useEffect } from "react"; 
+import { Container, Row, Col} from "react-bootstrap";
+import TrackVisibility from "react-on-screen";
+import 'animate.css';
+import './TingleTennis.css'; 
+
+// 圖片路徑
+import tingleHeroFull from "../assets/img/court.png";
+import flowChartImg from "../assets/img/flow-chart.png";
+import roomImg from "../assets/img/room.png"; 
+import floatingPersonImg from "../assets/img/wu.png"; 
+import hardware1 from "../assets/img/hardware1.png"; 
+import hardware2 from "../assets/img/hardware2.png"; 
+
+export const TingleTennis = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    return (
+        <div className="tingle-page-container">
+            {/* Section 1: Hero (保持不變) */}
+            <section className="project-detail-hero-section">
+                <div className="hero-image-wrapper">
+                    <img src={tingleHeroFull} alt="Tingle Tennis Court" />
+                    <div className="hero-gradient-overlay"></div>
+                    <div className="hero-text-overlay">
+                        <Container>
+                            <TrackVisibility>
+                                {({ isVisible }) => (
+                                    <div className={isVisible ? "animate__animated animate__fadeInUp" : ""}>
+                                        <span className="tagline-hero">SIGGRAPH Asia 2024</span>
+                                        <h1 className="hero-title">
+                                            <span className="pink-text">Tingle</span> Tennis
+                                        </h1>
+                                        <h2 className="hero-subtitle">Menstrual Experience Sensory Simulation Sport Device</h2>
+                                    </div>
+                                )}
+                            </TrackVisibility>
+                        </Container>
+                    </div>
+                </div>
+            </section>
+
+            {/* Section 2 */}
+            <section className="project-description-room-bg">
+                {/* 漂浮人物：直接放在 section 內，用絕對定位控制在右側 */}
+                <div className="floating-person-absolute">
+                    <img src={floatingPersonImg} alt="User Interaction" className="person-img" />
+                </div>
+
+                <Container>
+                    <Row>
+                        <Col lg={6} md={8}>
+                            <TrackVisibility>
+                                {({ isVisible }) => (
+                                    <div className={isVisible ? "animate__animated animate__fadeInLeft" : ""}>
+                                        <h2 className="description-number">01</h2>
+                                        <h3 className="description-title">Project Description</h3>
+                                        <div className="description-body">
+                                            <p className="description-text">
+                                                <strong>Tingle Tennis</strong> is an innovative VR sports simulation designed to foster 
+                                                empathy regarding the physiological challenges of menstruation. 
+                                            </p>
+                                            <p className="description-text">
+                                                By integrating <strong>Unity VR</strong> with <strong>TENS</strong> hardware, 
+                                                the system recreates the physical sensations of menstrual cramps in real-time.
+                                                This project bridges the gap between digital interaction and bodily experience.
+                                            </p>
+                                        </div>
+                                    </div>
+                                )}
+                            </TrackVisibility>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+            {/* Section 3 */}
+            <section className="tingle-study-section">
+                <Container>
+                    <Row>
+                        {/* 左半邊：02 Motivation + 03 User Study 文字說明 */}
+                        <Col lg={5} md={12}>
+                            <TrackVisibility>
+                                {({ isVisible }) => (
+                                    <div className={isVisible ? "animate__animated animate__fadeInLeft" : ""}>
+                                        <div className="sub-section">
+                                            <h2 className="description-number">02</h2>
+                                            <h3 className="description-title">Motivation</h3>
+                                            <p className="description-text">
+                                                Historically, athletes experiencing irregularities were often forced to remain silent, as menstrual cycles were seen as an excuse[cite: 214]. 
+                                                Inspired by the <strong>#SayPeriod</strong> movement, we interviewed college athletes and found many face intense pressure and frustration from "invisible" pain and underperformance[cite: 215, 216].
+                                            </p>
+                                        </div>
+
+                                        <div className="sub-section mt-5">
+                                            <h2 className="description-number">03</h2>
+                                            <h3 className="description-title">User Study</h3>
+                                            <p className="description-text">
+                                                We conducted a pilot study with 8 users[cite: 268]. While the immersion and pain simulation received highly positive reviews, 
+                                                users noted that the tutorial was insufficient and the system could further explore the uncontrollable nature of menstrual cramps[cite: 268, 269, 270].
+                                            </p>
+                                        </div>
+                                    </div>
+                                )}
+                            </TrackVisibility>
+                        </Col>
+
+                        {/* 右半邊：兩個表格上下排列 */}
+                        <Col lg={7} md={12}>
+                            <TrackVisibility>
+                                {({ isVisible }) => (
+                                    <div className={isVisible ? "animate__animated animate__fadeInRight" : ""}>
+                                        
+                                        {/* 上方表格：User Story 邏輯 */}
+                                        <div className="user-story-table-wrapper mb-4">
+                                            <h4 className="table-header">User Story Strategy</h4>
+                                            <div className="table-responsive">
+                                                <table className="user-logic-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Target User</th>
+                                                            <th>Goal</th>
+                                                            <th>Reason</th>
+                                                            <th>Why VR?</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Males lacking first hand experience; sports coaches</td>
+                                                            <td>Break social taboos; provide educational empathy platform</td>
+                                                            <td>Biological differences; individual variation in pain intensity</td>
+                                                            <td>Simulates social challenges; immersive somatic education</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        {/* 下方表格：Item-Consequence (從圖片轉換) */}
+                                        <div className="journey-map-wrapper">
+                                            <h4 className="table-header">User Journey Map</h4>
+                                            <div className="table-responsive">
+                                                <table className="journey-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Phases</th>
+                                                            <th>Awareness</th>
+                                                            <th>Interest</th>
+                                                            <th>Decision</th>
+                                                            <th>Experience</th>
+                                                            <th>Advocacy</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td className="row-label">Actions</td>
+                                                            <td>Find info on menstrual health; study gender equality</td>
+                                                            <td>Search for VR related to menstrual experience</td>
+                                                            <td>Decide whether to trial/purchase based on reviews</td>
+                                                            <td>Carry out the simulation; record own physical feedback</td>
+                                                            <td>Share experience on social media; recommend to others</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td className="row-label">Touchpoint</td>
+                                                            <td>Social media; gender equality seminars</td>
+                                                            <td>Official VR website; influencer/KOL reviews</td>
+                                                            <td>Exhibition booths; developer website</td>
+                                                            <td>Internal organization use; student workshops</td>
+                                                            <td>Personal social media; public speeches/works</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td className="row-label">Feeling</td>
+                                                            <td>Curious & Concerned</td>
+                                                            <td>Curious & Expectant</td>
+                                                            <td>Nervous & Expectant</td>
+                                                            <td>Nervous & Excited</td>
+                                                            <td>Satisfied & Empathetic</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div className="study-footer">
+                                                * Structured based on the Tingle Tennis User Journey Map analysis.
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                )}
+                            </TrackVisibility>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+
+            {/* Section 04: Our Goal (橫向長條) */}
+            <section className="tingle-goal-strip">
+                <Container fluid className="px-0">
+                    <TrackVisibility>
+                        {({ isVisible }) => (
+                            <div className={`goal-content-wrapper ${isVisible ? "animate__animated animate__fadeIn" : ""}`}>
+                                <div className="goal-text-container">
+                                    <span className="goal-number">04</span>
+                                    <h2 className="goal-label">Our Goal</h2>
+                                    <div className="goal-divider"></div>
+                                    <p className="goal-statement">
+                                        To bridge the empathy gap by integrating <strong>Unity VR</strong> and <strong>TENS</strong> technology, 
+                                        transforming invisible physiological challenges into a shared sensory experience that empowers 
+                                        social understanding and support for athletes.
+                                    </p>
+                                </div>
+                            </div>
+                        )}
+                    </TrackVisibility>
+                </Container>
+            </section>
+            <section className="tingle-flow-section">
+                <Container>
+                    <div className="section-header text-center mb-5">
+                        <h2 className="description-number">05</h2>
+                        <h3 className="description-title">Game Flow Chart</h3>
+                    </div>
+
+                    <Row className="justify-content-center align-items-stretch">
+                        {/* Step 1: Preparation */}
+                        <Col lg={4} md={6} className="mb-4">
+                            <div className="flow-card">
+                                <div className="flow-step">Phase 01</div>
+                                <h4 className="flow-title">Preparation Stage</h4>
+                                <p className="flow-desc">
+                                    Players start in their room, choosing items (Coffee, Painkillers, etc.) 
+                                    that affect their <strong>Concentration</strong> and <strong>Pain Levels</strong> for the day.
+                                </p>
+                                <div className="flow-tag">Decision Making and Menstrual Education</div>
+                            </div>
+                        </Col>
+
+                        {/* Step 2: Haptic Feedback */}
+                        <Col lg={4} md={6} className="mb-4">
+                            <div className="flow-card active-flow">
+                                <div className="flow-step">Phase 02</div>
+                                <h4 className="flow-title">Tennis Practice Stage</h4>
+                                <p className="flow-desc">
+                                    The system transmits signals to <strong>TENS</strong> and <strong>Thermal</strong> hardware, 
+                                    triggering real-time menstrual cramp sensations based on the game's cycle.
+                                </p>
+                                <div className="flow-tag">Experience of Decision-Based Changing Pain Level</div>
+                            </div>
+                        </Col>
+
+                        {/* Step 3: Sport Experience */}
+                        <Col lg={4} md={6} className="mb-4">
+                            <div className="flow-card">
+                                <div className="flow-step">Phase 03</div>
+                                <h4 className="flow-title">Final Match Stage</h4>
+                                <p className="flow-desc">
+                                    Players engage in a tennis match while enduring physiological pain, 
+                                    experiencing how physical conditions impact athletic performance.
+                                </p>
+                                <div className="flow-tag">compete with AI competitor under pain pressure</div>
+                            </div>
+                        </Col>
+                    </Row>
+
+                    {/* 這裡可以放你實際的 Flow Chart 圖片 */}
+                    <Row className="mt-5 justify-content-center">
+                        <Col lg={10}>
+                            <div className="main-flow-image-container">
+                                <div className="flow-overlay">SYSTEM ARCHITECTURE FLOW</div>
+                                {/* 請替換成你的 flow 圖路徑 */}
+                                <img src={flowChartImg} alt="Game Flow Chart" className="img-fluid flow-img" />
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+            {/* Section 6 */}
+            <section className="tingle-hardware-section">
+                <Container>
+                    <Row className="align-items-center">
+                        {/* 左半邊：Hardware Architecture 專業英文解釋 */}
+                        <Col lg={6} md={12}>
+                            <TrackVisibility>
+                                {({ isVisible }) => (
+                                    <div className={isVisible ? "animate__animated animate__fadeInLeft" : ""}>
+                                        <h2 className="description-number">06</h2>
+                                        <h3 className="description-title">Hardware Architecture</h3>
+                                        
+                                        <div className="hardware-detail-item">
+                                            <h4 className="hw-item-title">1. TENS Electrical Stimulation</h4>
+                                            <p className="hw-item-text">
+                                                To replicate the rhythmic cramping and throbbing sensations of uterine contractions, the system integrates a <strong>TENS (Transcutaneous Electrical Nerve Stimulation)</strong> module. Unity transmits real-time commands to an <strong>Arduino Uno</strong> to modulate pulse frequency and intensity. We specifically engineered stochastic (randomized) current oscillations to simulate the unpredictable nature of menstrual pain, which directly challenges the user's concentration and muscular response during the tennis match.
+                                            </p>
+                                        </div>
+
+                                        <div className="hardware-detail-item">
+                                            <h4 className="hw-item-title">2. Thermal Feedback System</h4>
+                                            <p className="hw-item-text">
+                                                The hardware incorporates high-performance heating elements designed to work in tandem with the TENS electrodes. This thermal integration serves as a <strong>relief mechanism</strong> within the simulation. When a player selects a "Hot Water Bag" in the virtual environment, the heater rapidly elevates its temperature, providing physical thermal feedback that allows the user to intuitively experience the soothing process of menstrual pain relief.
+                                            </p>
+                                        </div>
+
+                                        <div className="hardware-detail-item">
+                                            <h4 className="hw-item-title">3. Real-time Synchronization</h4>
+                                            <p className="hw-item-text">
+                                                The central control unit utilizes <strong>Serial Communication</strong> to establish a bi-directional link between Unity and the physical hardware. The system dynamically adjusts hardware output parameters based on the player's current stage in the 3-day virtual menstrual cycle. This ensures that virtual physiological data (such as menstrual flow and pain levels) is precisely translated into somatic pressure and temperature changes.
+                                            </p>
+                                        </div>
+                                    </div>
+                                )}
+                            </TrackVisibility>
+                        </Col>
+
+                        {/* 右半邊：兩張帶有白色背景容器的圖片 */}
+                        <Col lg={6} md={12}>
+                            <TrackVisibility>
+                                {({ isVisible }) => (
+                                    <div className={`hardware-images-wrapper ${isVisible ? "animate__animated animate__fadeInRight" : ""}`}>
+                                        
+                                        {/* 第一張圖：User setup diagram */}
+                                        <div className="hw-image-container mb-5">
+                                            <div className="hw-white-box">
+                                                <img src={hardware1} alt="User setup diagram" className="hw-diagram-img" />
+                                            </div>
+                                            <div className="hw-label">Hardware Deployment & User Setup</div>
+                                        </div>
+
+                                        {/* 第二張圖：Detailed components */}
+                                        <div className="hw-image-container">
+                                            <div className="hw-white-box">
+                                                <img src={hardware2} alt="TENS components" className="hw-diagram-img" />
+                                            </div>
+                                            <div className="hw-label">TENS Device & Circuitry Detail</div>
+                                        </div>
+
+                                    </div>
+                                )}
+                            </TrackVisibility>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+        </div>
+    );
+};

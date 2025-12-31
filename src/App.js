@@ -11,22 +11,32 @@ import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import ParticleSphere from './components/ParticleSphere';
 import { Archive } from 'react-bootstrap-icons';
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { TingleTennis } from "./components/TingleTennis";
+import { ProjectNavBar} from "./components/ProjectNavBar";
 
 function App() {
   return (
-    <div className="App">
-      <NavBar /> 
-      <Banner />
-      <Projects />
-      <Archives />
-      <ExtraExperience />
-      <Skills />
-      
-      {/* <Contact /> */}
-      {/* <Footer /> */}
-    </div>
+    <Routes>
+        <Route path="/" element={
+          <>
+            <NavBar /> 
+            <Banner />
+            <Projects />
+            <Archives />
+            <Footer />
+          </>
+        } />
+        <Route path="/project/tingle-tennis" element={
+          <>
+            <ProjectNavBar /> 
+            <TingleTennis />
+            {/* <Footer /> */}
+          </>
+        } />
+      </Routes>
   );
 }
 
 export default App;
+

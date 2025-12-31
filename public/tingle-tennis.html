@@ -4,32 +4,204 @@
   <meta charset="UTF-8" />
   <title>Tingle Tennis | Michelle Chang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary-glow: #00ffaa;
+      --bg-dark: #0a1f1f;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --text-gray: #b8b8b8;
+    }
+
     body {
       margin: 0;
-      padding: 40px;
-      background: #121212;
+      padding: 0;
+      background: var(--bg-dark);
       color: white;
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
     }
-    a {
-      color: #AA367C;
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+
+    .back-link {
+      color: var(--primary-glow);
       text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 40px;
+      transition: 0.3s;
+    }
+
+    .back-link:hover {
+      text-shadow: 0 0 10px var(--primary-glow);
+      transform: translateX(-5px);
+    }
+
+    /* Header Section */
+    header {
+      border-left: 4px solid var(--primary-glow);
+      padding-left: 25px;
+      margin-bottom: 60px;
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 4rem;
+      margin: 0;
+      letter-spacing: -1px;
+    }
+
+    .subtitle {
+      color: var(--primary-glow);
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .conference-badge {
+      display: inline-block;
+      background: rgba(230, 126, 34, 0.2);
+      color: #e67e22;
+      border: 1px solid #e67e22;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    /* Content Grid */
+    .content-section {
+      margin-bottom: 50px;
+    }
+
+    h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 10px;
+      margin-top: 40px;
+    }
+
+    p {
+      color: var(--text-gray);
+      font-size: 1.1rem;
+    }
+
+    /* Highlight Box */
+    .grid-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .info-card {
+      background: var(--card-bg);
+      padding: 25px;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .info-card h4 {
+      margin: 0 0 10px 0;
+      color: var(--primary-glow);
+    }
+
+    .tech-pill {
+      display: inline-block;
+      background: rgba(255,255,255,0.1);
+      padding: 4px 10px;
+      border-radius: 5px;
+      margin: 5px;
+      font-size: 0.9rem;
+    }
+
+    /* Role Section */
+    .role-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .role-list li {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .role-list li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--primary-glow);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2.5rem; }
+      .grid-info { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-  <a href="/">← Back to Portfolio</a>
+  <div class="container">
+    <a href="/" class="back-link">← BACK TO CORE GROVE</a>
 
-  <h1>Tingle Tennis</h1>
-  <p><strong>Menstrual Experience Sensory Simulation Sport Device</strong></p>
+    <header>
+      <div class="subtitle">VR Interaction / Haptic Interface</div>
+      <h1>Tingle Tennis</h1>
+      <div class="conference-badge">SIGGRAPH Asia 2024 Posters</div>
+    </header>
 
-  <p>
-    Tingle Tennis is a VR-based experiential system designed to simulate
-    the physical discomfort and challenges of menstruation during sports,
-    aiming to foster empathy and awareness through immersive interaction.
-  </p>
+    <section class="content-section">
+      <h3>Project Overview</h3>
+      <p>
+        Tingle Tennis 是一個結合 VR 與<b>觸覺回饋（Haptic Feedback）</b>的感官體驗系統。
+        旨在模擬女性在生理期進行體育活動時的身體不適（經痛、疲累感），透過技術手段打破感官隔閡，促進大眾對生理期挑戰的同理心與理解。
+      </p>
+    </section>
+
+    <div class="grid-info">
+      <div class="info-card">
+        <h4>Sensory Simulation</h4>
+        <p>利用經皮神經電刺激 (TENS) 與 Arduino 整合，在遊戲過程中實時模擬經痛的收縮感，其強度會隨著比賽節奏與角色體力值變化。</p>
+      </div>
+      <div class="info-card">
+        <h4>Game Mechanics</h4>
+        <p>包含「Stamina Bar」與「Blood Absorption Bar」模擬真實生理機制。玩家必須在維持運動表現的同時，應對隨機爆發的經痛干擾。</p>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h3>Technology Stack</h3>
+      <div style="margin-top: 15px;">
+        <span class="tech-pill">Unity (C#)</span>
+        <span class="tech-pill">Meta Quest 2</span>
+        <span class="tech-pill">Arduino</span>
+        <span class="tech-pill">TENS Device</span>
+        <span class="tech-pill">Transformer / GPT (Coach NPC)</span>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h3>My Contributions</h3>
+      <ul class="role-list">
+        <li><b>Project Manager:</b> 負責團隊時程管理、SA 24 論文投稿與 SIGGRAPH Asia 現場展示協調。</li>
+        <li><b>UX Flow Design:</b> 設計「經痛模擬」與「運動反饋」之間的互動邏輯。</li>
+        <li><b>HCI Research:</b> 進行 8 名使用者的質性研究，分析沉浸式體驗對「同理心提升」的有效性。</li>
+      </ul>
+    </section>
+
+    <section class="content-section" style="text-align: center; margin-top: 100px; opacity: 0.5;">
+      <p>© 2024 Michelle Chang | Designed for The Core Grove</p>
+    </section>
+  </div>
 
 </body>
 </html>
