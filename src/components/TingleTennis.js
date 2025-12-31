@@ -1,17 +1,17 @@
-import React, { useEffect } from "react"; 
-import { Container, Row, Col} from "react-bootstrap";
+import React, { useEffect } from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import TrackVisibility from "react-on-screen";
 import 'animate.css';
-import './TingleTennis.css'; 
+import './TingleTennis.css';
 
 // 圖片路徑
 import tingleHeroFull from "../assets/img/court.png";
 import flowChartImg from "../assets/img/flow-chart.png";
 import factorMap from "../assets/img/factor-map.png";
-import roomImg from "../assets/img/room.png"; 
-import floatingPersonImg from "../assets/img/wu.png"; 
-import hardware1 from "../assets/img/hardware1.png"; 
-import hardware2 from "../assets/img/hardware2.png"; 
+import roomImg from "../assets/img/room.png";
+import floatingPersonImg from "../assets/img/wu.png";
+import hardware1 from "../assets/img/hardware1.png";
+import hardware2 from "../assets/img/hardware2.png";
 
 export const TingleTennis = () => {
     useEffect(() => {
@@ -21,7 +21,7 @@ export const TingleTennis = () => {
     return (
         <div className="tingle-page-container">
             {/* Section 1: Hero (保持不變) */}
-            <section className="project-detail-hero-section">
+            <section id="section1" className="project-detail-hero-section">
                 <div className="hero-image-wrapper">
                     <img src={tingleHeroFull} alt="Tingle Tennis Court" />
                     <div className="hero-gradient-overlay"></div>
@@ -44,7 +44,7 @@ export const TingleTennis = () => {
             </section>
 
             {/* Section 2 */}
-            <section className="project-description-room-bg">
+            <section id="section2" className="project-description-room-bg">
                 {/* 漂浮人物：直接放在 section 內，用絕對定位控制在右側 */}
                 <div className="floating-person-absolute">
                     <img src={floatingPersonImg} alt="User Interaction" className="person-img" />
@@ -60,11 +60,11 @@ export const TingleTennis = () => {
                                         <h3 className="description-title">Project Description</h3>
                                         <div className="description-body">
                                             <p className="description-text">
-                                                <strong>Tingle Tennis</strong> is an innovative VR sports simulation designed to foster 
-                                                empathy regarding the physiological challenges of menstruation. 
+                                                <strong>Tingle Tennis</strong> is an innovative VR sports simulation designed to foster
+                                                empathy regarding the physiological challenges of menstruation.
                                             </p>
                                             <p className="description-text">
-                                                By integrating <strong>Unity VR</strong> with <strong>TENS</strong> hardware, 
+                                                By integrating <strong>Unity VR</strong> with <strong>TENS</strong> hardware,
                                                 the system recreates the physical sensations of menstrual cramps in real-time.
                                                 This project bridges the gap between digital interaction and bodily experience.
                                             </p>
@@ -77,7 +77,7 @@ export const TingleTennis = () => {
                 </Container>
             </section>
             {/* Section 3 */}
-            <section className="tingle-study-section">
+            <section section id="section3" className="tingle-study-section">
                 <Container>
                     <Row>
                         {/* 左半邊：02 Motivation + 03 User Study 文字說明 */}
@@ -89,7 +89,7 @@ export const TingleTennis = () => {
                                             <h2 className="description-number">02</h2>
                                             <h3 className="description-title">Motivation</h3>
                                             <p className="description-text">
-                                                Historically, athletes experiencing irregularities were often forced to remain silent, as menstrual cycles were seen as an excuse[cite: 214]. 
+                                                Historically, athletes experiencing irregularities were often forced to remain silent, as menstrual cycles were seen as an excuse[cite: 214].
                                                 Inspired by the <strong>#SayPeriod</strong> movement, we interviewed college athletes and found many face intense pressure and frustration from "invisible" pain and underperformance[cite: 215, 216].
                                             </p>
                                         </div>
@@ -98,7 +98,7 @@ export const TingleTennis = () => {
                                             <h2 className="description-number">03</h2>
                                             <h3 className="description-title">User Study</h3>
                                             <p className="description-text">
-                                                We conducted a pilot study with 8 users[cite: 268]. While the immersion and pain simulation received highly positive reviews, 
+                                                We conducted a pilot study with 8 users[cite: 268]. While the immersion and pain simulation received highly positive reviews,
                                                 users noted that the tutorial was insufficient and the system could further explore the uncontrollable nature of menstrual cramps[cite: 268, 269, 270].
                                             </p>
                                         </div>
@@ -112,7 +112,7 @@ export const TingleTennis = () => {
                             <TrackVisibility>
                                 {({ isVisible }) => (
                                     <div className={isVisible ? "animate__animated animate__fadeInRight" : ""}>
-                                        
+
                                         {/* 上方表格：User Story 邏輯 */}
                                         <div className="user-story-table-wrapper mb-4">
                                             <h4 className="table-header">User Story Strategy</h4>
@@ -195,7 +195,7 @@ export const TingleTennis = () => {
             </section>
 
             {/* Section 04: Our Goal (橫向長條) */}
-            <section className="tingle-goal-strip">
+            <section id="section4" className="tingle-goal-strip">
                 <Container fluid className="px-0">
                     <TrackVisibility>
                         {({ isVisible }) => (
@@ -205,8 +205,8 @@ export const TingleTennis = () => {
                                     <h2 className="goal-label">Our Goal</h2>
                                     <div className="goal-divider"></div>
                                     <p className="goal-statement">
-                                        To bridge the empathy gap by integrating <strong>Unity VR</strong> and <strong>TENS</strong> technology, 
-                                        transforming invisible physiological challenges into a shared sensory experience that empowers 
+                                        To bridge the empathy gap by integrating <strong>Unity VR</strong> and <strong>TENS</strong> technology,
+                                        transforming invisible physiological challenges into a shared sensory experience that empowers
                                         social understanding and support for athletes.
                                     </p>
                                 </div>
@@ -215,7 +215,8 @@ export const TingleTennis = () => {
                     </TrackVisibility>
                 </Container>
             </section>
-            <section className="tingle-flow-section">
+            {/* Section 5 */}
+            <section id="section5" className="tingle-flow-section">
                 <Container>
                     <div className="section-header text-center mb-5">
                         <h2 className="description-number">05</h2>
@@ -229,7 +230,7 @@ export const TingleTennis = () => {
                                 <div className="flow-step">Phase 01</div>
                                 <h4 className="flow-title">Preparation Stage</h4>
                                 <p className="flow-desc">
-                                    Players start in their room, choosing items (Coffee, Painkillers, etc.) 
+                                    Players start in their room, choosing items (Coffee, Painkillers, etc.)
                                     that affect their <strong>Concentration</strong> and <strong>Pain Levels</strong> for the day.
                                 </p>
                                 <div className="flow-tag">Decision Making and Menstrual Education</div>
@@ -242,7 +243,7 @@ export const TingleTennis = () => {
                                 <div className="flow-step">Phase 02</div>
                                 <h4 className="flow-title">Tennis Practice Stage</h4>
                                 <p className="flow-desc">
-                                    The system transmits signals to <strong>TENS</strong> and <strong>Thermal</strong> hardware, 
+                                    The system transmits signals to <strong>TENS</strong> and <strong>Thermal</strong> hardware,
                                     triggering real-time menstrual cramp sensations based on the game's cycle.
                                 </p>
                                 <div className="flow-tag">Experience of Decision-Based Changing Pain Level</div>
@@ -255,7 +256,7 @@ export const TingleTennis = () => {
                                 <div className="flow-step">Phase 03</div>
                                 <h4 className="flow-title">Final Match Stage</h4>
                                 <p className="flow-desc">
-                                    Players engage in a tennis match while enduring physiological pain, 
+                                    Players engage in a tennis match while enduring physiological pain,
                                     experiencing how physical conditions impact athletic performance.
                                 </p>
                                 <div className="flow-tag">compete with AI competitor under pain pressure</div>
@@ -264,26 +265,24 @@ export const TingleTennis = () => {
                     </Row>
 
                     {/* 這裡可以放你實際的 Flow Chart 圖片 */}
-                    <Row className="mt-5 justify-content-center">
+                    <Row className="mt-5 justify-content-center d-flex align-items-stretch gy-5">
                         <Col lg={6} md={12}>
                             <div className="main-flow-image-container">
                                 <div className="flow-overlay">SYSTEM ARCHITECTURE FLOW</div>
-                                {/* 請替換成你的 flow 圖路徑 */}
-                                <img src={flowChartImg} alt="Game Flow Chart" className="img-fluid flow-img" />
+                                <img src={flowChartImg} alt="Flow Chart" className="flow-img-large" />
                             </div>
                         </Col>
                         <Col lg={6} md={12}>
                             <div className="main-flow-image-container">
                                 <div className="flow-overlay">FACTOR MAP</div>
-                                {/* 請替換成你的 flow 圖路徑 */}
-                                <img src={factorMap} alt="Game Flow Chart" className="img-fluid flow-img" />
+                                <img src={factorMap} alt="Factor Map" className="flow-img-large" />
                             </div>
                         </Col>
                     </Row>
                 </Container>
             </section>
             {/* Section 6 */}
-            <section className="tingle-hardware-section">
+            <section id="section6" className="tingle-hardware-section">
                 <Container>
                     <Row className="align-items-center">
                         {/* 左半邊：Hardware Architecture 專業英文解釋 */}
@@ -293,7 +292,7 @@ export const TingleTennis = () => {
                                     <div className={isVisible ? "animate__animated animate__fadeInLeft" : ""}>
                                         <h2 className="description-number">06</h2>
                                         <h3 className="description-title">Hardware Architecture</h3>
-                                        
+
                                         <div className="hardware-detail-item">
                                             <h4 className="hw-item-title">1. TENS Electrical Stimulation</h4>
                                             <p className="hw-item-text">
@@ -324,7 +323,7 @@ export const TingleTennis = () => {
                             <TrackVisibility>
                                 {({ isVisible }) => (
                                     <div className={`hardware-images-wrapper ${isVisible ? "animate__animated animate__fadeInRight" : ""}`}>
-                                        
+
                                         {/* 第一張圖：User setup diagram */}
                                         <div className="hw-image-container mb-5">
                                             <div className="hw-white-box">
@@ -347,6 +346,42 @@ export const TingleTennis = () => {
                         </Col>
                     </Row>
                 </Container>
+            </section>
+            {/* Section 7*/}
+            <section id="section7" className="tingle-full-video-section">
+                {/* 上方：滿版影片區 */}
+                <div className="video-full-container">
+                    <div className="video-iframe-wrapper">
+                        <iframe
+                            src="https://www.youtube.com/embed/CRy5uVJ_atg?autoplay=1&mute=1&loop=1&playlist=CRy5uVJ_atg&controls=0&modestbranding=1&rel=0"
+                            title="Tingle Tennis System Interaction Demo"
+                            frameBorder="0"
+                            allow="accelerometer; controls=1; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen>
+                        </iframe>
+                    </div>
+                    {/* 底部漸層遮罩 */}
+                    <div className="video-bottom-gradient"></div>
+                </div>
+
+                {/* 下方：標題文字區 */}
+                <div className="video-bottom-text-area">
+                    <Container>
+                        <TrackVisibility>
+                            {({ isVisible }) => (
+                                <div className={isVisible ? "animate__animated animate__fadeInUp" : ""}>
+                                    <div className="d-flex align-items-baseline gap-3">
+                                        <h2 className="video-full-number-bottom">07</h2>
+                                        <h3 className="video-full-title-bottom">System Interaction Demo</h3>
+                                    </div>
+                                    <p className="video-subtext">
+                                        A seamless loop between Unity VR and TENS hardware architecture.
+                                    </p>
+                                </div>
+                            )}
+                        </TrackVisibility>
+                    </Container>
+                </div>
             </section>
         </div>
     );
