@@ -545,6 +545,155 @@
     color: var(--primary-cyan) !important;
 }
 
+/* ===== Item Effect Section ===== */
+.item-effect-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.item-effect-img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    object-fit: contain;
+    margin-left: 180px;
+
+}
+
+/* 左上角文字標籤 */
+.item-effect-label {
+    position: absolute;
+    /* top: px; */
+    left: -20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Introduction（粉色） */
+.item-effect-intro {
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(79, 211, 211);
+    letter-spacing: 0.5px;
+}
+
+/* Item Effect 主標 */
+.item-effect-title {
+    font-size: 50px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.item-effect-subtitle {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+    /* 淡白，標註感 */
+    letter-spacing: 0.4px;
+    text-transform: lowercase;
+    margin-top: 2px;
+}
+
+/* ===== Tennis Interaction Row ===== */
+.tennis-interaction-row {
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+/* 左側 */
+.tennis-interaction-left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* 標題 */
+.interaction-title {
+    max-width: 420px;
+}
+
+.interaction-intro {
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(79, 211, 211);
+    letter-spacing: 0.5px;
+}
+
+.interaction-main-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-top: 8px;
+    white-space: normal;
+}
+
+/* 圖片 */
+.interaction-image-wrapper {
+    width: 100%;
+}
+
+.interaction-image {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ① Row 一定要撐高 */
+.tennis-interaction-row {
+    align-items: stretch;
+}
+
+/* 右側文字說明 */
+.tennis-interaction-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: 520px;
+}
+
+/* 說明段落 */
+.interaction-description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+
+/* ② 右側 Col 內層：變成置中容器 */
+.interaction-video-wrapper {
+    height: 100%;
+    /* 吃滿左邊高度 */
+    display: flex;
+    align-items: center;
+    /* 垂直置中 */
+    justify-content: center;
+    /* 水平置中 */
+}
+
+/* ③ 影片比例盒 */
+.video-ratio {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    /* ⭐ 比 padding-top 更穩 */
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.video-ratio iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
 /* 手機版 RWD 選單修正 */
 @media (max-width: 991px) {
     .navbar-collapse {

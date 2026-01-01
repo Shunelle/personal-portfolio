@@ -12,6 +12,7 @@ import roomImg from "../assets/img/room.png";
 import floatingPersonImg from "../assets/img/wu.png";
 import hardware1 from "../assets/img/hardware1.png";
 import hardware2 from "../assets/img/hardware2.png";
+import itemEffectImg from "../assets/img/item-effect.png";
 
 export const TingleTennis = () => {
     useEffect(() => {
@@ -263,6 +264,65 @@ export const TingleTennis = () => {
                             </div>
                         </Col>
                     </Row>
+                    <Row className="justify-content-center my-5">
+                        <Col lg={10} md={12}>
+                            <div className="item-effect-wrapper">
+                                {/* 左上角標題 */}
+                                <div className="item-effect-label">
+                                    <div className="item-effect-label">
+                                        <span className="item-effect-intro">Introduction of</span>
+                                        <span className="item-effect-title">Item Design</span>
+                                        <span className="item-effect-subtitle">room scene</span>
+                                    </div>
+                                </div>
+                                <img
+                                    src={itemEffectImg}
+                                    alt="Item Effect Diagram"
+                                    className="item-effect-img"
+                                />
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row className="tennis-interaction-row align-items-stretch">
+                        {/* 左半邊：標題 + 圖片 */}
+                        <Col lg={5} md={12}>
+                            <div className="tennis-interaction-text-wrapper">
+                                {/* 標題（沿用舊 CSS） */}
+                                <div className="interaction-title">
+                                    <span className="interaction-intro">Introduction of</span>
+                                    <h2 className="interaction-main-title">Tennis Interaction</h2>
+                                    <span className="item-effect-subtitle">practice and match stage</span>
+                                </div>
+
+                                {/* 說明文字 */}
+                                <p className="interaction-description">
+                                    After selecting the required items in the room scene, players enter the tennis court to begin
+                                    their training and learn how to perform proper swing motions. During gameplay, players are
+                                    required to change sanitary pads according to on-screen instructions.
+                                    <br /><br />
+                                    Failure to replace the sanitary product within the specified time limit will result in an
+                                    early termination of the training session, leading to a reduced concentration score. This
+                                    directly increases the difficulty of subsequent actions, causing slower reaction times and
+                                    decreased shot accuracy during practice or matches.
+                                    <br /><br />
+                                    After completing three days of training, players advance to the match stage, where they
+                                    compete in a full tennis match against a specially designed AI opponent, experiencing how
+                                    accumulated physical conditions and decision-making impact overall performance.
+                                </p>
+                            </div>
+                        </Col>
+
+
+                        {/* 右半邊：YouTube 影片 */}
+                        <Col lg={7} md={12}>
+                            <div className="interaction-video-wrapper">
+                                <div className="video-ratio">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/CRy5uVJ_atg?si=PJ8gvH5ju24gHPLS&amp;clip=Ugkxe1S-oHQK0e0dBFfGoFGkMRb2wuyK52iC&amp;clipt=EL3RCBidpgw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
+
 
                     {/* 這裡可以放你實際的 Flow Chart 圖片 */}
                     <Row className="mt-5 justify-content-center d-flex align-items-stretch gy-5">
@@ -353,7 +413,7 @@ export const TingleTennis = () => {
                 <div className="video-full-container">
                     <div className="video-iframe-wrapper">
                         <iframe
-                            src="https://www.youtube.com/embed/CRy5uVJ_atg?autoplay=1&mute=1&loop=1&playlist=CRy5uVJ_atg&controls=0&modestbranding=1&rel=0"
+                            src="https://www.youtube.com/embed/CRy5uVJ_atg?autoplay=1&mute=1&playsinline=1&rel=0"
                             title="Tingle Tennis System Interaction Demo"
                             frameBorder="0"
                             allow="accelerometer; controls=1; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
