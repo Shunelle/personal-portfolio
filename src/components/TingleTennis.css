@@ -17,7 +17,7 @@
     overflow-x: hidden;
 }
 
-/* --- ProjectNavBar --- */
+/* --- ProjectsNavBar --- */
 .project-navbar {
     transition: all 0.4s ease-in-out;
 }
@@ -503,7 +503,7 @@
     }
 }
 
-/* --- ProjectNavBar 專屬文字樣式 --- */
+/* --- ProjectsNavBar 專屬文字樣式 --- */
 
 .project-navbar .nav-logo {
     width: 120px;

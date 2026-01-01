@@ -13,28 +13,34 @@ import ParticleSphere from './components/ParticleSphere';
 import { Archive } from 'react-bootstrap-icons';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { TingleTennis } from "./components/TingleTennis";
-import { ProjectNavBar} from "./components/ProjectNavBar";
+import { AIdoll } from "./components/AIdoll";
+import { ProjectsNavBar } from "./components/ProjectsNavBar";
 
 function App() {
   return (
     <Routes>
-        <Route path="/" element={
-          <>
-            <NavBar /> 
-            <Banner />
-            <Projects />
-            <Archives />
-            <Footer />
-          </>
-        } />
-        <Route path="/project/tingle-tennis" element={
-          <>
-            <ProjectNavBar /> 
-            <TingleTennis />
-            {/* <Footer /> */}
-          </>
-        } />
-      </Routes>
+      <Route path="/" element={
+        <>
+          <NavBar />
+          <Banner />
+          <Projects />
+          {/* <Archives /> */}
+          <Footer />
+        </>
+      } />
+      <Route path="/project/tingle-tennis" element={
+        <>
+          <ProjectsNavBar />
+          <TingleTennis />
+        </>
+      } />
+      <Route path="/project/aidoll" element={
+        <>
+          <ProjectsNavBar />
+          <AIdoll />
+        </>
+      } />
+    </Routes>
   );
 }
 

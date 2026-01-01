@@ -1,0 +1,503 @@
+/* ===== Page Container ===== */
+.aidoll-page-container {
+    background-color: #0b0c14;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* ===== Typographic System (Tingle Style) ===== */
+.description-number {
+    font-size: 48px;
+    font-weight: 700;
+    color: rgba(168, 140, 255, 0.25);
+    /* 半透明紫色 */
+    margin-bottom: -5px;
+    line-height: 1;
+    display: block;
+    text-align: left;
+}
+
+.description-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-align: left;
+}
+
+/* ===== Section Spacing ===== */
+.aidoll-concept-section,
+.aidoll-persona-section {
+    padding: 100px 0;
+    background-color: #0b0c14;
+}
+
+/* ===== Section 01: Hero ===== */
+.project-detail-hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+    /* 保持鏡像效果 */
+}
+
+.hero-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg,
+            rgba(168, 140, 255, 0.55) 0%,
+            rgba(122, 189, 255, 0.35) 35%,
+            rgba(20, 22, 45, 0.011) 70%);
+    z-index: 1;
+}
+
+.hero-text-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+.tagline-hero {
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(200, 210, 255, 0.85);
+    margin-bottom: 18px;
+    line-height: 1.6;
+}
+
+.hero-title {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.pink-text {
+    background: linear-gradient(90deg, #c9a7ff 0%, #7bbdff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(230, 235, 255, 0.9);
+    max-width: 600px;
+}
+
+/* ===== Section 02: Concept (Left Image) ===== */
+.concept-image-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.concept-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.concept-image-mask {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(168, 140, 255, 0.35) 0%, rgba(0, 0, 0, 0.85) 70%);
+}
+
+.concept-highlight {
+    color: #c9a7ff;
+}
+
+.concept-subtitle {
+    font-size: 22px;
+    font-weight: 600;
+    color: #c9a7ff;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.concept-list {
+    padding-left: 20px;
+    margin-bottom: 12px;
+}
+
+.concept-list li {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(230, 235, 255, 0.9);
+    margin-bottom: 10px;
+}
+
+/* ===== Section 03: Persona Table ===== */
+.persona-table-wrapper {
+    background: linear-gradient(135deg, rgba(168, 140, 255, 0.3), rgba(122, 189, 255, 0.1));
+    border-radius: 20px;
+    padding: 2px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.persona-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #0b0c14;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.persona-table th {
+    background: rgba(168, 140, 255, 0.15);
+    color: #c9a7ff;
+    padding: 20px;
+    font-size: 1.1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(168, 140, 255, 0.3);
+}
+
+.persona-table td {
+    padding: 20px;
+    color: rgba(230, 235, 255, 0.85);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    line-height: 1.6;
+}
+
+.persona-name {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* ===== Section 04: Our Goal Strip ===== */
+.aidoll-goal-strip {
+    background: #0b0c14;
+    padding: 80px 0;
+    width: 100%;
+}
+
+.goal-content-wrapper {
+    background: linear-gradient(90deg,
+            rgba(168, 140, 255, 0) 0%,
+            rgba(168, 140, 255, 0.1) 50%,
+            rgba(168, 140, 255, 0) 100%);
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgba(168, 140, 255, 0.2);
+    border-bottom: 1px solid rgba(168, 140, 255, 0.2);
+}
+
+.goal-text-container {
+    text-align: center;
+    max-width: 800px;
+}
+
+.goal-label {
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.goal-divider {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #c9a7ff, #7bbdff);
+    margin: 20px auto;
+}
+
+.goal-statement {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: rgba(230, 235, 255, 0.9);
+}
+
+.goal-statement strong {
+    color: #c9a7ff;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .persona-table-wrapper {
+        overflow-x: auto;
+    }
+
+    .persona-table {
+        min-width: 800px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 40px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .goal-label {
+        font-size: 2rem;
+    }
+
+    .goal-statement {
+        font-size: 1.2rem;
+    }
+}
+
+/* ===== Section 05: Flow Chart & Features ===== */
+.aidoll-flow-section {
+    padding: 100px 0;
+    background-color: #0b0c14;
+}
+
+.flow-chart-container {
+    position: relative;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.flow-main-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 左上角疊加文字 */
+.flow-overlay-text {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 3;
+}
+
+.overlay-brand {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #c9a7ff;
+    /* 紫色 */
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.overlay-slogan {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #ffffff;
+    /* 白色 */
+    margin-top: -5px;
+    letter-spacing: 1px;
+}
+
+/* 功能群組排版 */
+.feature-group {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-radius: 20px;
+    height: 100%;
+    border-left: 4px solid #c9a7ff;
+}
+
+.feature-group-title {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* 響應式：手機版文字縮小 */
+@media (max-width: 768px) {
+    .flow-overlay-text {
+        top: 20px;
+        left: 20px;
+    }
+
+    .overlay-brand {
+        font-size: 1.8rem;
+    }
+
+    .overlay-slogan {
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== Section 06: Feature Demos ===== */
+.aidoll-demo-section {
+    padding: 100px 0;
+    background-color: #0b0c14;
+}
+
+.demo-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(168, 140, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    height: 100%;
+    /* 確保卡片等高 */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 讓嵌入式影片響應式 */
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.demo-description {
+    padding: 25px;
+    flex-grow: 1;
+    /* 讓描述區塊撐開剩餘空間 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* 讓文字垂直置中 */
+}
+
+.demo-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #c9a7ff;
+    margin-bottom: 10px;
+}
+
+.demo-text {
+    font-size: 0.95rem;
+    color: rgba(230, 235, 255, 0.8);
+    line-height: 1.6;
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+    .demo-title {
+        font-size: 1.2rem;
+    }
+
+    .demo-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== Extra Features Strip (Inside Row) ===== */
+.extra-features-strip {
+    /* background: linear-gradient(90deg,
+            rgba(168, 140, 255, 0.02) 0%,
+            rgba(168, 140, 255, 0.12) 50%,
+            rgba(168, 140, 255, 0.02) 100%); */
+    /* border-radius: 20px; */
+    padding: 10px 25px;
+    /* border: 1px solid rgba(168, 140, 255, 0.15); */
+    text-align: center;
+    margin-top: 10px;
+}
+
+.extra-tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: #c9a7ff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.extra-statement {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: rgba(230, 235, 255, 0.9);
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.extra-statement strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* 讓手機版顯示也沒問題 */
+@media (max-width: 768px) {
+    .extra-statement {
+        font-size: 1rem;
+    }
+}
+
+/* ===== Technical Deep Dive Styles ===== */
+.full-architecture-wrapper {
+    /* background: rgba(20, 21, 35, 0.6);
+    border-radius: 24px;
+    padding: 30px;
+    border: 1px solid rgba(168, 140, 255, 0.2);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    display: block;
+}
+
+.full-architecture-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+
+    filter: contrast(1.05) brightness(1.1);
+    transition: transform 0.5s ease;
+}
+
+.full-architecture-wrapper:hover .full-architecture-img {
+    transform: scale(1.01);
+    /* 鼠標懸停時輕微放大 */
+}
+
+.aidoll-tech-section .container {
+    max-width: 1400px;
+    /* 增加 Container 的上限 */
+}
+
+
+.full-architecture-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .full-architecture-wrapper {
+        padding: 10px;
+    }
+}
