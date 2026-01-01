@@ -25,17 +25,17 @@ export const TingleTennis = () => {
             <section id="section1" className="project-detail-hero-section">
                 <div className="hero-image-wrapper">
                     <img src={tingleHeroFull} alt="Tingle Tennis Court" />
-                    <div className="hero-gradient-overlay"></div>
-                    <div className="hero-text-overlay">
+                    <div className="T-hero-gradient-overlay"></div>
+                    <div className="T-hero-text-overlay">
                         <Container>
                             <TrackVisibility>
                                 {({ isVisible }) => (
                                     <div className={isVisible ? "animate__animated animate__fadeInUp" : ""}>
-                                        <span className="tagline-hero">SIGGRAPH Asia 2024</span>
+                                        <span className="T-tagline-hero">SIGGRAPH Asia 2024</span>
                                         <h1 className="hero-title">
                                             <span className="pink-text">Tingle</span> Tennis
                                         </h1>
-                                        <h2 className="hero-subtitle">Menstrual Experience Sensory Simulation Sport Device</h2>
+                                        <h2 className="T-hero-subtitle">Menstrual Experience Sensory Simulation Sport Device</h2>
                                     </div>
                                 )}
                             </TrackVisibility>
@@ -90,8 +90,7 @@ export const TingleTennis = () => {
                                             <h2 className="description-number">02</h2>
                                             <h3 className="description-title">Motivation</h3>
                                             <p className="description-text">
-                                                Historically, athletes experiencing irregularities were often forced to remain silent, as menstrual cycles were seen as an excuse[cite: 214].
-                                                Inspired by the <strong>#SayPeriod</strong> movement, we interviewed college athletes and found many face intense pressure and frustration from "invisible" pain and underperformance[cite: 215, 216].
+                                                Historically, athletes facing menstrual irregularities were often silenced, as cycles were frequently dismissed as a mere excuse for poor performance. Inspired by the <strong>#SayPeriod</strong> movement, we interviewed collegiate athletes and uncovered a prevailing sense of frustration and pressure rooted in "invisible" pain and the resulting impact on their competitive edge.
                                             </p>
                                         </div>
 
@@ -99,8 +98,7 @@ export const TingleTennis = () => {
                                             <h2 className="description-number">03</h2>
                                             <h3 className="description-title">User Study</h3>
                                             <p className="description-text">
-                                                We conducted a pilot study with 8 users[cite: 268]. While the immersion and pain simulation received highly positive reviews,
-                                                users noted that the tutorial was insufficient and the system could further explore the uncontrollable nature of menstrual cramps[cite: 268, 269, 270].
+                                                We conducted a pilot study with 8 participants. While the system’s immersion and pain simulation received high praise, feedback indicated a need for a more comprehensive tutorial. Additionally, users suggested that the experience could more deeply address the uncontrollable nature of menstrual cramps to enhance emotional resonance.
                                             </p>
                                         </div>
                                     </div>
@@ -200,7 +198,7 @@ export const TingleTennis = () => {
                 <Container fluid className="px-0">
                     <TrackVisibility>
                         {({ isVisible }) => (
-                            <div className={`goal-content-wrapper ${isVisible ? "animate__animated animate__fadeIn" : ""}`}>
+                            <div className={`T-goal-content-wrapper ${isVisible ? "animate__animated animate__fadeIn" : ""}`}>
                                 <div className="goal-text-container">
                                     <span className="goal-number">04</span>
                                     <h2 className="goal-label">Our Goal</h2>

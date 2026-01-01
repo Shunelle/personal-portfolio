@@ -9,8 +9,7 @@
 .description-number {
     font-size: 48px;
     font-weight: 700;
-    color: rgba(168, 140, 255, 0.25);
-    /* 半透明紫色 */
+    color: #ffa1d0;
     margin-bottom: -5px;
     line-height: 1;
     display: block;
