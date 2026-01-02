@@ -9,9 +9,9 @@ import AIdollimg from "../assets/img/AIdoll.png";
 import AIdollDesign from "../assets/img/AIdollDesign.png";
 import FlowChartImg from "../assets/img/AIdollFlowChart.png";
 import AIdollTechFlowimg from "../assets/img/AIdollTechFlow.png";
-import demoImg1 from "../assets/img/aidoll-demo-startup.png";
-import demoImg2 from "../assets/img/aidoll-demo-memory.png";
-import demoImg3 from "../assets/img/aidoll-demo-event.png";
+import demoImg1 from "../assets/img/Aidoll-demo-startup.png";
+import demoImg2 from "../assets/img/Aidoll-demo-memory.png";
+import demoImg3 from "../assets/img/Aidoll-demo-event.png";
 import AIdollFinal from "../assets/img/AIdollFinal.png";
 
 export const AIdoll = () => {
@@ -89,7 +89,7 @@ export const AIdoll = () => {
                                             </p>
 
                                             <p className="description-text">
-                                                The system enables <strong>24/7 interactive companionship</strong>,
+                                                The system enables <strong>interactive companionship</strong>,
                                                 allowing users to communicate with the idol at any time, creating an
                                                 experience that feels as if the idol is truly present by their side.
                                             </p>
