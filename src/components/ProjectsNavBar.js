@@ -37,13 +37,13 @@ export const ProjectsNavBar = () => {
 
     // 導覽文字清單
     const navLinks = [
-        { id: "section1", title: "Hero" },
+        { id: "section1", title: "Overview" },
         { id: "section2", title: "Intro" },
         { id: "section3", title: "Study" },
         { id: "section4", title: "Goal" },
-        { id: "section5", title: "Flow" },
+        { id: "section5", title: "Design" },
         { id: "section6", title: "Hardware" },
-        { id: "section7", title: "Video" },
+        { id: "section7", title: "Presentation" },
     ];
 
     return (
@@ -70,7 +70,7 @@ export const ProjectsNavBar = () => {
                         ))}
 
                         <Nav.Link as={Link} to="/" className="project-nav-link main-portfolio-btn">
-                            Main Portfolio
+                            Return to Portfolio
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

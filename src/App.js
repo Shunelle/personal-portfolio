@@ -25,7 +25,7 @@ function App() {
           <Banner />
           <Projects />
           {/* <Archives /> */}
-          <Footer />
+          {/* <Footer /> */}
         </>
       } />
       <Route path="/project/tingle-tennis" element={

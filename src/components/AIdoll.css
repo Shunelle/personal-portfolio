@@ -89,6 +89,7 @@
 }
 
 .hero-subtitle {
+    text-align: left;
     font-size: 22px;
     font-weight: 400;
     line-height: 1.5;
@@ -472,10 +473,13 @@
     width: 100%;
     height: auto;
     border-radius: 12px;
-
     filter: contrast(1.05) brightness(1.1);
     transition: transform 0.5s ease;
+
+    transform: translateX(40px);
+    /* ⭐ 往右 */
 }
+
 
 .full-architecture-wrapper:hover .full-architecture-img {
     transform: scale(1.01);
@@ -483,20 +487,94 @@
 }
 
 .aidoll-tech-section .container {
-    max-width: 1400px;
+    max-width: 14000px;
     /* 增加 Container 的上限 */
-}
-
-
-.full-architecture-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
 }
 
 @media (max-width: 768px) {
     .full-architecture-wrapper {
         padding: 10px;
     }
+}
+
+.demo-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* ===== Final Full-width Section ===== */
+
+.aidoll-final-full-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 120px;
+    /* ⭐ 與上一個 section 的距離 */
+}
+
+/* Image container */
+.final-image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden
+}
+
+/* Full image */
+.final-full-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 800%;
+}
+
+
+/* Bottom gradient overlay */
+.final-bottom-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    background: linear-gradient(180deg,
+            rgba(8, 10, 18, 0) 0%,
+            rgba(8, 10, 18, 0.885) 60%,
+            rgba(8, 10, 18, 1) 100%);
+    pointer-events: none;
+}
+
+/* Text overlay */
+.final-text-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 80px 96px;
+    pointer-events: none;
+}
+
+/* Text content */
+.final-text-content {
+    max-width: 520px;
+}
+
+/* Small tag */
+.final-tag {
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #c9a7ff;
+    margin-bottom: 12px;
+}
+
+/* Title */
+.final-title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #ffffff;
 }

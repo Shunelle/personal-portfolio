@@ -44,8 +44,8 @@ export const Projects = () => {
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <h2>The Core Grove</h2>
                   <p className="max-w-2xl mx-auto text-lg leading-relaxed italic text-gray-300 opacity-90 transition-all hover:opacity-100">
-                    Deep within the digital wilderness, I have nurtured this <span className="text-emerald-400 font-semibold shadow-emerald-500/50">"Core Grove"</span>—a sanctuary for my most defining works of the past year.
-                    Here, interactive experiences are brought to life through logic, and immersion is ignited by 3D environments.
+                    Core Grove presents my most representative projects from the past year,
+                    focusing on interactive systems driven by logic and immersive 3D experiences.
                   </p>
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     {/* <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">

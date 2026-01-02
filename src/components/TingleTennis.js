@@ -14,6 +14,7 @@ import hardware1 from "../assets/img/hardware1.png";
 import hardware2 from "../assets/img/hardware2.png";
 import itemEffectImg from "../assets/img/item-effect.png";
 
+
 export const TingleTennis = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -33,7 +34,8 @@ export const TingleTennis = () => {
                                     <div className={isVisible ? "animate__animated animate__fadeInUp" : ""}>
                                         <span className="T-tagline-hero">SIGGRAPH Asia 2024</span>
                                         <h1 className="hero-title">
-                                            <span className="pink-text">Tingle</span> Tennis
+                                            <span className="pink-text">Tingle</span>{" "}
+                                            <span className="teal-text">Tennis</span>
                                         </h1>
                                         <h2 className="T-hero-subtitle">Menstrual Experience Sensory Simulation Sport Device</h2>
                                     </div>
