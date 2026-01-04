@@ -2,7 +2,7 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { CoreGrove } from "./CoreGrove";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import projImg3 from "../assets/img/Locus.png";
 import colorSharp from "../assets/img/color-sharp.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -22,11 +22,12 @@ export const Projects = () => {
       imgUrl: projImg2,
       slug: "aidoll", // 新增這個
     },
-    // {
-    //   title: "Business Startup",
-    //   description: "Design & Development",
-    //   imgUrl: projImg3,
-    // },
+    {
+      title: "Locus",
+      description: "Hardware Product / Google HPS",
+      imgUrl: projImg3,
+      slug: "Locus", // 新增這個
+    },
     // {
     //   title: "Business Startup",
     //   description: "Design & Development",
@@ -69,9 +70,10 @@ export const Projects = () => {
                         </Row>
 
                         {/* 第二排：其餘三個，平均 */}
-                        <Row>
+                        {/* 第二排：其餘項目，平均分配並等高 */}
+                        <Row className="d-flex align-items-stretch">
                           {projects.slice(1).map((project, index) => (
-                            <Col md={4} sm={12} key={index}>
+                            <Col md={6} sm={12} key={index} className="mb-4 d-flex">
                               <CoreGrove {...project} />
                             </Col>
                           ))}

@@ -33,7 +33,7 @@ export const AIdoll = () => {
                                 <Col lg={6} md={8}>
                                     <TrackVisibility>
                                         {({ isVisible }) => (
-                                            <div className={isVisible ? "animate__animated animate__fadeInUp" : ""}>
+                                            <div className={isVisible ? "animate__animated animate__fadeInUp justify-content-start" : ""}>
                                                 <span className="tagline-hero">
                                                     AWS AI Wave: Taiwan Generative AI Applications Hackathon
                                                     <br />
@@ -493,7 +493,7 @@ export const AIdoll = () => {
                 </Container>
             </section>
             {/* ===== Final Section: Visual Showcase ===== */}
-            <section id="section-final" className="aidoll-final-full-section">
+            <section id="section7" className="aidoll-final-full-section">
                 <div className="final-image-container">
                     <img
                         src={AIdollFinal}
@@ -511,6 +511,9 @@ export const AIdoll = () => {
                             <h2 className="final-title">
                                 AWS AI Wave: Taiwan Generative AI Applications Hackathon
                             </h2>
+                            <p className="video-subtext">
+                                Presented by: Michelle Chang, Lin Chin-Wei, Lee Man-Ho, Chiu Yu-Chieh and Alex Huang
+                            </p>
                         </div>
                     </div>
                 </div>

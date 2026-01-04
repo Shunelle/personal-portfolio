@@ -14,6 +14,7 @@ import { Archive } from 'react-bootstrap-icons';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { TingleTennis } from "./components/TingleTennis";
 import { AIdoll } from "./components/AIdoll";
+import { Locus } from "./components/Locus";
 import { ProjectsNavBar } from "./components/ProjectsNavBar";
 
 function App() {
@@ -38,6 +39,12 @@ function App() {
         <>
           <ProjectsNavBar />
           <AIdoll />
+        </>
+      } />
+      <Route path="/project/Locus" element={
+        <>
+          <ProjectsNavBar />
+          <Locus />
         </>
       } />
     </Routes>

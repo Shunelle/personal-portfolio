@@ -1,0 +1,380 @@
+.locus-page-container {
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* 複用 AIdoll 的 Hero 邏輯 */
+.project-detail-hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Google 官方配色方案 */
+.locus-colorful-title .g-blue {
+    color: #4285F4;
+}
+
+.locus-colorful-title .g-red {
+    color: #EA4335;
+}
+
+.locus-colorful-title .g-yellow {
+    color: #FBBC05;
+}
+
+.locus-colorful-title .g-green {
+    color: #34A853;
+}
+
+/* 確保 Hero Section 的文字容器是滿版的且居中 */
+.hero-text-overlay {
+    position: absolute;
+    top: 50%;
+    /* 垂直居中 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 完美的水平與垂直居中 */
+    width: 100%;
+    z-index: 10;
+}
+
+/* 調整副標題，確保它也在中間 */
+.hero-subtitle-locus {
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-style: italic;
+    margin-top: 15px;
+    opacity: 0.9;
+}
+
+.hero-image-wrapper-locus {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.hero-title {
+    font-size: 5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+
+.description-title-locus {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.concept-subtitle-locus {
+    color: #FBBC05;
+}
+
+.concept-image-wrapper {
+    padding: 10px;
+    background: #1a1a1a;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.concept-image {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* 針對 Google 配色的 Accent Border */
+.border-blue {
+    border-bottom: 5px solid #4285F4;
+}
+
+/* Goal Strip 樣式 (同 AI doll) */
+.aidoll-goal-strip {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.goal-content-wrapper {
+    width: 100%;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.goal-statement {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.concept-list li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #ccc;
+    list-style: none;
+    position: relative;
+    padding-left: 20px;
+}
+
+.concept-list li::before {
+    content: "•";
+    color: #4285F4;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.locus-flow-section {
+    padding: 100px 0;
+    background-color: #000;
+}
+
+/* 第一排 Flow 標題樣式 */
+.flow-subtitle {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 圖片包裝容器 */
+.flow-img-wrapper {
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.flow-img-wrapper:hover {
+    transform: translateY(-5px);
+    /* 懸停時往上飄一點 */
+}
+
+/* 統一圖片圓角與陰影 */
+.rounded-shadow {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+/* 下方文字說明框 */
+.interaction-text-box {
+    padding-right: 30px;
+}
+
+.feature-group-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+/* 響應式：手機版時兩張圖間距 */
+@media (max-width: 768px) {
+    .flow-sub-card {
+        margin-bottom: 40px;
+    }
+
+    .interaction-text-box {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+}
+
+/* 讓硬體部分的列表符號顏色一致 */
+#section6 .concept-list li::before {
+    color: #34A853;
+    /* 使用 Google Green */
+}
+
+/* 強化圖片展示效果 */
+.architecture-img-wrapper .architecture-diagram {
+    width: 100%;
+    transition: all 0.5s ease;
+    filter: grayscale(20%);
+    /* 增加一點點灰色調，讓它更有工業風格 */
+}
+
+.architecture-img-wrapper .architecture-diagram:hover {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
+/* 針對移動裝置的垂直排版調整 */
+@media (max-width: 991px) {
+    #section6 .interaction-text-box {
+        margin-bottom: 50px;
+    }
+}
+
+/* 新增針對這個 Section 的 Class */
+.locus-hardware-section {
+    padding: 100px 0;
+    background-color: #000;
+}
+
+/* 列表前導符號顏色 */
+.locus-hardware-section .concept-list li::before {
+    color: #34A853;
+    /* Google Green */
+}
+
+/* 通用文字內容區塊 */
+.text-content-box {
+    padding: 0 20px;
+}
+
+/* 影片響應式容器 */
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 比例 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #1a1a1a;
+    /* 影片載入前背景色 */
+    border-radius: 12px;
+    /* 圓角 */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    /* 圓角 */
+}
+
+/* 圖片容器 */
+.hardware-diagram-wrapper {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.hardware-diagram-wrapper:hover {
+    transform: translateY(-5px);
+}
+
+/* 手機版排版調整 */
+@media (max-width: 991px) {
+    .text-content-box {
+        margin-bottom: 40px;
+        padding: 0;
+    }
+}
+
+
+.challenge-image-container {
+    position: relative;
+    width: 100%;
+}
+
+.challenge-overlay-tag {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 10;
+    /* 確保文字永遠在最上層 */
+}
+
+
+.challenge-overlay-tag .number-tag {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #EA4335;
+    /* Google Red */
+    line-height: 1;
+    display: block;
+    opacity: 0.9;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7);
+}
+
+.challenge-overlay-tag .tag-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: -5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7);
+}
+
+/* 圖片微調 */
+.challenge-main-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    /* 稍微調暗圖片背景，讓疊加文字更明顯 */
+    filter: brightness(0.85);
+    transition: filter 0.3s ease;
+}
+
+.challenge-image-container:hover .challenge-main-img {
+    filter: brightness(1);
+    /* 滑鼠移上去時恢復亮度 */
+}
+
+/* 讓數字與標題獨立顯示，不再重疊 */
+.challenge-header-area {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.number-tag-standalone {
+    font-size: 4.5rem;
+    /* 數字維持很大 */
+    font-weight: 900;
+    color: #EA4335;
+    line-height: 1;
+    display: block;
+}
+
+.tag-text-standalone {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-top: -10px;
+    /* 讓英文字稍微靠近數字一點 */
+}
+
+.challenge-img-wrapper {
+    /* 核心調整參數：如果你覺得還是太近，就增加這個 px 值 */
+    margin-top: 50px;
+
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.video-subtext-locus {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 1px;
+    max-width: 800px;
+}

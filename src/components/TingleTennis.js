@@ -435,7 +435,7 @@ export const TingleTennis = () => {
                                         <h3 className="video-full-title-bottom">System Interaction Demo</h3>
                                     </div>
                                     <p className="video-subtext">
-                                        A seamless loop between Unity VR and TENS hardware architecture.
+                                        Presented by: Michelle Chang, Ken Wu, Sharin Lai, James Lee, and Leo Ho
                                     </p>
                                 </div>
                             )}
