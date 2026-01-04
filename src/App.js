@@ -41,12 +41,12 @@ function App() {
           <AIdoll />
         </>
       } />
-      {/* <Route path="/project/Locus" element={
+      <Route path="/project/Locus" element={
         <>
           <ProjectsNavBar />
           <Locus />
         </>
-      } /> */}
+      } />
     </Routes>
   );
 }
