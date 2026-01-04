@@ -9,7 +9,7 @@ import AIdollimg from "../assets/img/AIdoll.png";
 import AIdollDesign from "../assets/img/AIdollDesign.png";
 import FlowChartImg from "../assets/img/AIdollFlowChart.png";
 import AIdollTechFlowimg from "../assets/img/AIdollTechFlow.png";
-import demoImg1 from "../assets/img/Aidoll-demo-startup.png";
+import demoImg1 from "../assets/img/Aidoll-startup.png";
 import demoImg2 from "../assets/img/Aidoll-demo-memory.png";
 import demoImg3 from "../assets/img/Aidoll-demo-event.png";
 import AIdollFinal from "../assets/img/AIdollFinal.png";

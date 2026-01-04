@@ -69,8 +69,7 @@ export const Projects = () => {
                           </Col>
                         </Row>
 
-                        {/* 第二排：其餘三個，平均 */}
-                        {/* 第二排：其餘項目，平均分配並等高 */}
+
                         <Row className="d-flex align-items-stretch">
                           {projects.slice(1).map((project, index) => (
                             <Col md={6} sm={12} key={index} className="mb-4 d-flex">
