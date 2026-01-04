@@ -10,6 +10,7 @@ import LocusUIflowImg from "../assets/img/Locus-UIflow.png";
 import LocusChallengeImg from "../assets/img/Locus-challenge.png";
 import LocusFinal from "../assets/img/Locus-final.png";
 import LocusHardwareComponentsImg from "../assets/img/Locus-HardwareComponentsImg.png";
+import demoImg1 from "../assets/img/Aidoll-demo-startup.png";
 
 
 export const Locus = () => {
