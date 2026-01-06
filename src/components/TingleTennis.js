@@ -100,7 +100,7 @@ export const TingleTennis = () => {
                                             <h2 className="description-number">03</h2>
                                             <h3 className="description-title">User Study</h3>
                                             <p className="description-text">
-                                                We conducted a pilot study with 8 participants. While the system’s immersion and pain simulation received high praise, feedback indicated a need for a more comprehensive tutorial. Additionally, users suggested that the experience could more deeply address the uncontrollable nature of menstrual cramps to enhance emotional resonance.
+                                                We conducted user studies with both trained athletes and non-athletes, and we interviewed Taiwanese writer Wu Xiaole, known for her work on parenting and education, whose insights shaped our approach to designing more authentic embodied simulations.
                                             </p>
                                         </div>
                                     </div>

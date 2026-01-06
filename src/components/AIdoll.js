@@ -23,7 +23,7 @@ export const AIdoll = () => {
         <div className="aidoll-page-container">
             {/* ===== Section 01: Banner ===== */}
             <section id="section1" className="project-detail-hero-section">
-                <div className="hero-image-wrapper">
+                <div className="aidoll-hero-image-wrapper">
                     <img src={AIdollHeroFull} alt="AIdoll Hero Michelle" />
                     <div className="hero-gradient-overlay"></div>
 
