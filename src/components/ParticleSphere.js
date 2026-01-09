@@ -1,6 +1,6 @@
 import React, { useRef, useMemo, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import bannerBg from '../assets/img/banner-bg.png'; 
+import bannerBg from '../assets/img/banner-bg.png';
 import * as THREE from "three";
 
 function Particles({ count = 300 }) {
@@ -32,8 +32,8 @@ function Particles({ count = 300 }) {
   const { positions, colors } = useMemo(() => {
     const positions = new Float32Array(count * 3);
     const colors = new Float32Array(count * 3);
-    const colorTeal = new THREE.Color("#00e0e0ff");
-    const colorOrange = new THREE.Color("#FF8C00");
+    const colorTeal = new THREE.Color("#28ffffff");
+    const colorOrange = new THREE.Color("#ffb55cff");
     for (let i = 0; i < count; i++) {
       positions[i * 3] = (Math.random() - 0.5) * 10;
       positions[i * 3 + 1] = (Math.random() - 0.5) * 10;
@@ -46,25 +46,25 @@ function Particles({ count = 300 }) {
     return { positions, colors };
   }, [count]);
 
-    useFrame((state) => {
-        const time = state.clock.getElapsedTime();
-        if (mesh.current) {
-        // 1. 基礎自轉：調得非常慢，像恆星自轉
-        mesh.current.rotation.y = time * 0.05;
-        
-        // 2. 目標角度：縮小範圍，讓動態更穩重
-        const targetRotationX = -mousePos.current[1] * 0.4; 
-        const targetRotationY = mousePos.current[0] * 0.4;
+  useFrame((state) => {
+    const time = state.clock.getElapsedTime();
+    if (mesh.current) {
+      // 1. 基礎自轉：調得非常慢，像恆星自轉
+      mesh.current.rotation.y = time * 0.05;
 
-        // 3. 統一緩慢速度：0.02 是關鍵
-        // 不管是左右還是上下，現在都會有同樣的延遲絲滑感
-        mesh.current.rotation.x += (targetRotationX - mesh.current.rotation.x) * 0.02;
-        mesh.current.rotation.y += (targetRotationY - mesh.current.rotation.y) * 0.02;
-        
-        // 4. 呼吸效果：調到極低（幾乎感覺不到，只是為了讓畫面不僵硬）
-        mesh.current.position.y = Math.sin(time * 0.2) * 0.03; 
-        }
-    });
+      // 2. 目標角度：縮小範圍，讓動態更穩重
+      const targetRotationX = -mousePos.current[1] * 0.4;
+      const targetRotationY = mousePos.current[0] * 0.4;
+
+      // 3. 統一緩慢速度：0.02 是關鍵
+      // 不管是左右還是上下，現在都會有同樣的延遲絲滑感
+      mesh.current.rotation.x += (targetRotationX - mesh.current.rotation.x) * 0.1;
+      mesh.current.rotation.y += (targetRotationY - mesh.current.rotation.y) * 0.1;
+
+      // 4. 呼吸效果：調到極低（幾乎感覺不到，只是為了讓畫面不僵硬）
+      mesh.current.position.y = Math.sin(time * 0.2) * 0.03;
+    }
+  });
 
   return (
     <points ref={mesh}>
@@ -72,15 +72,15 @@ function Particles({ count = 300 }) {
         <bufferAttribute attach="attributes-position" count={count} array={positions} itemSize={3} />
         <bufferAttribute attach="attributes-color" count={count} array={colors} itemSize={3} />
       </bufferGeometry>
-      <pointsMaterial 
-        size={0.15} 
-        vertexColors 
-        transparent 
-        opacity={0.8} 
-        map={circleTexture} 
-        alphaTest={0.5} 
-        sizeAttenuation 
-        blending={THREE.AdditiveBlending} 
+      <pointsMaterial
+        size={0.15}
+        vertexColors
+        transparent
+        opacity={0.7}
+        map={circleTexture}
+        alphaTest={0.5}
+        sizeAttenuation
+        blending={THREE.AdditiveBlending}
       />
     </points>
   );
@@ -91,13 +91,13 @@ function Particles({ count = 300 }) {
 
 export default function ParticleSphere() {
   return (
-    <div style={{ 
-      position: "absolute", 
-      top: 0, 
-      left: 0, 
-      width: "100%", 
-      height: "100%", 
-      zIndex: -1, 
+    <div style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      zIndex: -1,
       overflow: "hidden",
       backgroundImage: `url(${bannerBg})`,
       backgroundPosition: "top center",
@@ -117,7 +117,7 @@ export default function ParticleSphere() {
         left: 0,
         width: "100%",
         height: "100%",
-        backgroundColor: "rgba(0, 0, 0, 0.2)", // 調暗背景圖
+        backgroundColor: "rgba(0, 0, 0, 0.07)", // 調暗背景圖
         zIndex: -1 // 確保在粒子下面
       }} />
     </div>

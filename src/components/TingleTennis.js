@@ -92,7 +92,7 @@ export const TingleTennis = () => {
                                             <h2 className="description-number">02</h2>
                                             <h3 className="description-title">Motivation</h3>
                                             <p className="description-text">
-                                                Historically, athletes facing menstrual irregularities were often silenced, as cycles were frequently dismissed as a mere excuse for poor performance. Inspired by the <strong>#SayPeriod</strong> movement, we interviewed collegiate athletes and uncovered a prevailing sense of frustration and pressure rooted in "invisible" pain and the resulting impact on their competitive edge.
+                                                While serving as a university cheerleading captain, I suffered a severe elbow fracture that required surgery after I pushed through intense menstrual pain in silence. This grueling recovery led me to realize how cultural taboos in Asia often pressure female athletes to hide their discomfort. Inspired by the #SayPeriod movement, I aimed to transform this silence into understanding. This journey led to the creation of 'Tingle Tennis'—a VR sports game designed to foster empathy and bridge communication gaps across genders and cultures through an inclusive, technology-mediated environment.
                                             </p>
                                         </div>
 
@@ -413,10 +413,10 @@ export const TingleTennis = () => {
                 <div className="video-full-container">
                     <div className="video-iframe-wrapper">
                         <iframe
-                            src="https://www.youtube.com/embed/CRy5uVJ_atg?autoplay=1&mute=1&playsinline=1&rel=0"
+                            src="https://www.youtube.com/embed/CRy5uVJ_atg?autoplay=1&mute=1&loop=1&playlist=CRy5uVJ_atg&playsinline=1&rel=0"
                             title="Tingle Tennis System Interaction Demo"
                             frameBorder="0"
-                            allow="accelerometer; controls=1; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowFullScreen>
                         </iframe>
                     </div>

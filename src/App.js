@@ -26,6 +26,7 @@ function App() {
           <Banner />
           <Projects />
           {/* <Archives /> */}
+          {/* <Skills /> */}
           {/* <Footer /> */}
         </>
       } />

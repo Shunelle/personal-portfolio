@@ -36,8 +36,8 @@ export const Banner = () => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <span className="tagline">Welcome to my Portfolio</span>
-                  <h1 className="banner-title">I'm Michelle Chang</h1>
+                  <span className="tagline">Welcome to My Bio-Digital Wilderness.</span>
+                  <h1 className="banner-title">Michelle Chang</h1>
                   <h2
                     key={currentIndex}
                     className="banner-subtitle animate__animated animate__fadeIn"
