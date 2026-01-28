@@ -1,0 +1,558 @@
+/* =========================
+   ALOHA Planet – Hero Section
+========================= */
+
+.aloha-hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.aloha-hero-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.aloha-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Gradient Overlay */
+.aloha-hero-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.25) 0%,
+            rgba(0, 0, 0, 0.65) 60%,
+            rgba(0, 0, 0, 0.85) 100%);
+    z-index: 1;
+}
+
+/* Text Overlay */
+.aloha-hero-text {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+
+/* Tagline */
+.aloha-hero-tagline {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Title */
+.aloha-hero-title {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.aloha-title-main {
+    color: #ffffff;
+}
+
+.aloha-title-sub {
+    color: #aee6dc;
+    /* 柔和薄荷綠 */
+}
+
+/* Subtitle */
+.aloha-hero-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 520px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* =========================
+   ALOHA Planet – Introduction Section
+========================= */
+
+.aloha-intro-section {
+    position: relative;
+    padding: 120px 0 140px;
+    background: linear-gradient(180deg,
+            #0b1c1a 0%,
+            #0f2a26 100%);
+    color: #e6f2f0;
+}
+
+/* Section Number */
+.aloha-section-number {
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    color: rgba(174, 230, 220, 0.6);
+    margin-bottom: 0.5rem;
+}
+
+/* Section Title */
+.aloha-section-title {
+    font-size: clamp(2rem, 3vw, 2.6rem);
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+    color: #ffffff;
+}
+
+/* Text Container */
+.aloha-intro-text {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: rgba(230, 242, 240, 0.9);
+}
+
+/* Paragraph spacing */
+.aloha-intro-text p {
+    margin-bottom: 1.8rem;
+}
+
+/* Emphasis */
+.aloha-intro-text strong {
+    font-weight: 500;
+    color: #aee6dc;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .aloha-intro-section {
+        padding: 90px 0 100px;
+    }
+
+    .aloha-section-title {
+        margin-bottom: 2rem;
+    }
+
+    .aloha-intro-text {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+}
+
+/* =========================
+   ALOHA Planet – Scenario Grid
+========================= */
+
+.aloha-scenario-section {
+    padding: 120px 0 140px;
+    background-color: #0b1c1a;
+    color: #e6f2f0;
+}
+
+.aloha-scenario-grid {
+    margin-top: 3rem;
+}
+
+.aloha-scenario-cell {
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image Placeholder */
+.aloha-scenario-image-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(230, 242, 240, 0.4);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.aloha-scenario-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Text */
+.aloha-scenario-text h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #aee6dc;
+    margin-bottom: 0.5rem;
+}
+
+.aloha-scenario-text p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.6rem;
+    color: rgba(230, 242, 240, 0.9);
+}
+
+.aloha-scenario-emotion {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(174, 230, 220, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .aloha-scenario-section {
+        padding: 90px 0 100px;
+    }
+}
+
+/* =========================
+   ALOHA Planet – Process Strip
+========================= */
+
+.aloha-process-strip-section {
+    padding: 120px 0 140px;
+    background-color: #0b1c1a;
+    color: #e6f2f0;
+}
+
+.aloha-process-strip {
+    margin-top: 3.5rem;
+}
+
+.aloha-process-text {
+    max-width: 720px;
+    margin-bottom: 1.5rem;
+}
+
+.aloha-process-step {
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(174, 230, 220, 0.7);
+}
+
+.aloha-process-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0.4rem 0 0.8rem;
+    color: #ffffff;
+}
+
+.aloha-process-desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(230, 242, 240, 0.9);
+}
+
+/* Long Image Strip */
+.aloha-process-image-strip {
+    width: 100%;
+    aspect-ratio: 5 / 1;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(230, 242, 240, 0.35);
+    font-size: 0.85rem;
+    overflow: hidden;
+}
+
+.aloha-process-image-strip img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .aloha-process-strip-section {
+        padding: 90px 0 100px;
+    }
+
+    .aloha-process-image-strip {
+        aspect-ratio: 16 / 7;
+    }
+}
+
+/* =========================
+   ALOHA Planet – Tasks Section
+========================= */
+
+.aloha-tasks-section {
+    padding: 120px 0 140px;
+    background-color: #0f2a26;
+    color: #e6f2f0;
+}
+
+.aloha-task-block {
+    margin-top: 3.5rem;
+}
+
+.aloha-task-text {
+    max-width: 720px;
+    margin-bottom: 1.5rem;
+}
+
+.aloha-task-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(174, 230, 220, 0.7);
+}
+
+.aloha-task-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0.4rem 0 0.8rem;
+    color: #ffffff;
+}
+
+.aloha-task-desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(230, 242, 240, 0.9);
+}
+
+/* UI Image Placeholder */
+.aloha-task-image {
+    width: 100%;
+    aspect-ratio: 5 / 1;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(230, 242, 240, 0.4);
+    font-size: 0.85rem;
+    overflow: hidden;
+}
+
+.aloha-task-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .aloha-tasks-section {
+        padding: 90px 0 100px;
+    }
+}
+
+/* =========================
+   ALOHA Planet – Research Focus Strip
+========================= */
+
+.aloha-research-strip {
+    padding: 80px 0 90px;
+    background: linear-gradient(90deg,
+            rgba(174, 230, 220, 0.12),
+            rgba(15, 42, 38, 0.95));
+    border-top: 1px solid rgba(174, 230, 220, 0.2);
+    border-bottom: 1px solid rgba(174, 230, 220, 0.15);
+}
+
+.aloha-research-content {
+    max-width: 900px;
+}
+
+.aloha-research-title {
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(174, 230, 220, 0.9);
+    margin-bottom: 1.2rem;
+}
+
+.aloha-research-text {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: rgba(230, 242, 240, 0.95);
+    margin-bottom: 1.2rem;
+}
+
+.aloha-research-text strong {
+    font-weight: 500;
+    color: #aee6dc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .aloha-research-strip {
+        padding: 60px 0 70px;
+    }
+
+    .aloha-research-text {
+        font-size: 0.92rem;
+    }
+}
+
+/* =========================
+   ALOHA Planet – Research Artifacts
+========================= */
+
+.aloha-research-artifacts-section {
+    padding: 120px 0 120px;
+    background-color: #0f2a26;
+    color: #e6f2f0;
+}
+
+.aloha-artifact-grid {
+    margin-top: 3rem;
+}
+
+.aloha-artifact-card {
+    margin-bottom: 2.5rem;
+}
+
+/* Link wrapper */
+.aloha-artifact-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.25s ease;
+}
+
+.aloha-artifact-link:hover {
+    transform: translateY(-4px);
+}
+
+/* Image */
+.aloha-artifact-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(230, 242, 240, 0.45);
+    font-size: 0.9rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.aloha-artifact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Text */
+.aloha-artifact-text h4 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 0.4rem;
+}
+
+.aloha-artifact-text p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: rgba(230, 242, 240, 0.9);
+    margin-bottom: 0.6rem;
+}
+
+.aloha-artifact-cta {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(174, 230, 220, 0.8);
+}
+
+/* Hover accent */
+.aloha-artifact-link:hover .aloha-artifact-cta {
+    color: #aee6dc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .aloha-research-artifacts-section {
+        padding: 90px 0 100px;
+    }
+}
+
+/* =========================
+   ALOHA Planet – Building Environment
+========================= */
+
+.aloha-build-section {
+    padding: 100px 0 140px;
+    background-color: #081514;
+    color: #e6f2f0;
+}
+
+.aloha-build-list {
+    max-width: 760px;
+}
+
+.aloha-build-item {
+    margin-bottom: 2rem;
+}
+
+.aloha-build-item h4 {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #aee6dc;
+    margin-bottom: 0.4rem;
+}
+
+.aloha-build-item p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(230, 242, 240, 0.9);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .aloha-build-section {
+        padding: 80px 0 110px;
+    }
+}
+
+/* =========================
+   ALOHA Planet – Final Section
+========================= */
+
+.aloha-final-section {
+    padding: 120px 0 160px;
+    background: linear-gradient(180deg,
+            #0f2a26 0%,
+            #081514 100%);
+    color: #e6f2f0;
+}
+
+.aloha-final-text {
+    max-width: 780px;
+    font-size: 0.98rem;
+    line-height: 1.85;
+    color: rgba(230, 242, 240, 0.95);
+    margin-bottom: 3rem;
+}
+
+.aloha-final-text p {
+    margin-bottom: 1.8rem;
+}
+
+.aloha-final-text strong {
+    font-weight: 500;
+    color: #aee6dc;
+}
+
+.aloha-conclusion-title {
+    margin-top: 4rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .aloha-final-section {
+        padding: 90px 0 120px;
+    }
+}

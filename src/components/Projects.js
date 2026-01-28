@@ -3,6 +3,7 @@ import { CoreGrove } from "./CoreGrove";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/Locus.png";
+import projImg4 from "../assets/img/Aloha.png";
 import colorSharp from "../assets/img/color-sharp.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -14,25 +15,26 @@ export const Projects = () => {
       title: "Tingle-Tennis",
       description: "VR Interaction / Game Design",
       imgUrl: projImg1,
-      slug: "tingle-tennis", // 新增這個
+      slug: "tingle-tennis",
     },
     {
       title: "Aidoll",
-      description: "AI Integration / HCI Product Dev",
+      description: "AI Integration / AWS AI Hackathon",
       imgUrl: projImg2,
-      slug: "aidoll", // 新增這個
+      slug: "aidoll",
     },
     {
       title: "Locus",
       description: "Hardware Product / Google HPS",
       imgUrl: projImg3,
-      slug: "Locus", // 新增這個
+      slug: "Locus",
     },
-    // {
-    //   title: "Business Startup",
-    //   description: "Design & Development",
-    //   imgUrl: projImg3,
-    // },
+    {
+      title: "ALOHA Planet",
+      description: "VR Interaction / HCI Product Dev",
+      imgUrl: projImg4,
+      slug: "aloha-planet",
+    },
   ];
 
   return (
@@ -62,21 +64,20 @@ export const Projects = () => {
                   </Nav> */}
                     <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                       <Tab.Pane eventKey="first">
-                        {/* 第一排：Tingle Tennis */}
-                        <Row className="mb-4">
-                          <Col md={12}>
-                            <CoreGrove {...projects[0]} />
-                          </Col>
-                        </Row>
-
-
-                        <Row className="d-flex align-items-stretch">
-                          {projects.slice(1).map((project, index) => (
-                            <Col md={6} sm={12} key={index} className="mb-4 d-flex">
-                              <CoreGrove {...project} />
+                        <Row className="flex-column">
+                          {projects.map((project, index) => (
+                            <Col
+                              key={index}
+                              md={12}
+                              className="mb-4"
+                            >
+                              <div className="project-wrapper w-100">
+                                <CoreGrove {...project} />
+                              </div>
                             </Col>
                           ))}
                         </Row>
+
                       </Tab.Pane>
                       <Tab.Pane eventKey="section">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>

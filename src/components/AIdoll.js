@@ -13,6 +13,7 @@ import demoImg1 from "../assets/img/Aidoll-demo-startup.png";
 import demoImg2 from "../assets/img/Aidoll-demo-memory.png";
 import demoImg3 from "../assets/img/Aidoll-demo-event.png";
 import AIdollFinal from "../assets/img/AIdollFinal.png";
+import UIImg from "../assets/img/AIdoll-UI.png";
 
 export const AIdoll = () => {
     useEffect(() => {
@@ -336,6 +337,21 @@ export const AIdoll = () => {
                                         </div>
                                     </Col>
                                 </Row>
+                                <Row className="flow-interaction-image">
+                                    <img
+                                        src={UIImg}
+                                        alt="UI Preview"
+                                        className="project-ui-image"
+                                    />
+                                </Row>
+                                <p className="project-ui-note">
+                                    Based on insights from user studies, multiple participants expressed a
+                                    preference for a simple interface that emphasizes emotional interaction
+                                    rather than complex operational controls. As a result, the interface
+                                    was intentionally designed with minimal and intuitive button elements,
+                                    avoiding unnecessary or visually heavy UI components.
+                                </p>
+
                             </div>
                         )}
                     </TrackVisibility>

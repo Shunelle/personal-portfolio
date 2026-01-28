@@ -15,6 +15,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { TingleTennis } from "./components/TingleTennis";
 import { AIdoll } from "./components/AIdoll";
 import { Locus } from "./components/Locus";
+import { AlohaPlanet } from "./components/AlohaPlanet";
 import { ProjectsNavBar } from "./components/ProjectsNavBar";
 
 function App() {
@@ -46,6 +47,12 @@ function App() {
         <>
           <ProjectsNavBar />
           <Locus />
+        </>
+      } />
+      <Route path="/project/aloha-planet" element={
+        <>
+          <ProjectsNavBar />
+          <AlohaPlanet />
         </>
       } />
     </Routes>
