@@ -8,7 +8,6 @@ import './TingleTennis.css';
 import tingleHeroFull from "../assets/img/court.png";
 import flowChartImg from "../assets/img/flow-chart.png";
 import factorMap from "../assets/img/factor-map.png";
-import roomImg from "../assets/img/room.png";
 import floatingPersonImg from "../assets/img/wu.png";
 import hardware1 from "../assets/img/hardware1.png";
 import hardware2 from "../assets/img/hardware2.png";
